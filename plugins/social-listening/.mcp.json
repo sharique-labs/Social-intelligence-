@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "trigify": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://api.trigify.io/mcp"
+      ],
+      "env": {
+        "TRIGIFY_API_KEY": "${TRIGIFY_API_KEY}"
+      }
+    }
+  }
+}

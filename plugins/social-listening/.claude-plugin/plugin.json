@@ -1,0 +1,8 @@
+{
+  "name": "social-listening",
+  "description": "Social listening, competitive intelligence, and brand monitoring powered by Trigify. Create searches, fetch posts, track competitors, analyze sentiment, and monitor brand mentions across X, Reddit, YouTube, LinkedIn, and Podcasts.",
+  "version": "1.0.0",
+  "author": {
+    "name": "BenAI"
+  }
+}
