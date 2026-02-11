@@ -11,90 +11,14 @@
   },
   "plugins": [
     {
-      "name": "marketing",
-      "source": "./marketing",
+      "name": "social-listening",
+      "source": "./social-listening",
       "version": "1.0.0",
-      "description": "Social intelligence for marketing — content gap analysis, trending topics, ad opportunities, content strategy, and performance tracking powered by Trigify.",
+      "description": "Social listening, competitive intelligence, and brand monitoring powered by Trigify. Create searches, fetch posts, track competitors, analyze sentiment, and monitor brand mentions across X, Reddit, YouTube, LinkedIn, and Podcasts.",
       "author": { "name": "BenAI" },
-      "keywords": ["social-listening", "content-strategy", "trigify", "competitive-analysis", "brand-monitoring", "trending-topics", "content-gaps"],
+      "keywords": ["social-listening", "competitive-intelligence", "brand-monitoring", "trigify", "sentiment-analysis", "social-media"],
       "category": "social-intelligence",
-      "tags": ["marketing", "social-listening", "competitive-analysis", "brand-monitoring", "trigify"],
-      "mcpServers": {
-        "trigify": {
-          "command": "npx",
-          "args": ["-y", "mcp-remote", "https://api.trigify.io/mcp"],
-          "env": {
-            "TRIGIFY_API_KEY": "${TRIGIFY_API_KEY}"
-          }
-        }
-      }
-    },
-    {
-      "name": "sales",
-      "source": "./sales",
-      "version": "1.0.0",
-      "description": "Social intelligence for sales — prospect buying signals, competitive positioning, lead social activity, and market intelligence powered by Trigify.",
-      "author": { "name": "BenAI" },
-      "keywords": ["social-signals", "prospect-intelligence", "buying-intent", "competitive-positioning", "lead-research"],
-      "category": "social-intelligence",
-      "tags": ["sales", "social-signals", "competitive-positioning", "prospect-intelligence", "trigify"],
-      "mcpServers": {
-        "trigify": {
-          "command": "npx",
-          "args": ["-y", "mcp-remote", "https://api.trigify.io/mcp"],
-          "env": {
-            "TRIGIFY_API_KEY": "${TRIGIFY_API_KEY}"
-          }
-        }
-      }
-    },
-    {
-      "name": "product",
-      "source": "./product",
-      "version": "1.0.0",
-      "description": "Social intelligence for product — feature request surfacing, launch sentiment, market gaps, user pain points, and competitive product tracking powered by Trigify.",
-      "author": { "name": "BenAI" },
-      "keywords": ["product-intelligence", "feature-requests", "market-gaps", "launch-sentiment", "user-feedback"],
-      "category": "social-intelligence",
-      "tags": ["product", "feature-requests", "user-feedback", "launch-sentiment", "trigify"],
-      "mcpServers": {
-        "trigify": {
-          "command": "npx",
-          "args": ["-y", "mcp-remote", "https://api.trigify.io/mcp"],
-          "env": {
-            "TRIGIFY_API_KEY": "${TRIGIFY_API_KEY}"
-          }
-        }
-      }
-    },
-    {
-      "name": "operations",
-      "source": "./operations",
-      "version": "1.0.0",
-      "description": "Social intelligence automation — daily monitoring schedules, automated reporting workflows, and data pipelines for social intelligence powered by Trigify.",
-      "author": { "name": "BenAI" },
-      "keywords": ["automation", "monitoring", "reporting", "scheduling", "data-pipelines"],
-      "category": "social-intelligence",
-      "tags": ["operations", "automation", "monitoring", "reporting", "trigify"],
-      "mcpServers": {
-        "trigify": {
-          "command": "npx",
-          "args": ["-y", "mcp-remote", "https://api.trigify.io/mcp"],
-          "env": {
-            "TRIGIFY_API_KEY": "${TRIGIFY_API_KEY}"
-          }
-        }
-      }
-    },
-    {
-      "name": "creative",
-      "source": "./creative",
-      "version": "1.0.0",
-      "description": "Social intelligence for creative — trend-inspired content, visual content opportunities, and audience engagement patterns powered by Trigify.",
-      "author": { "name": "BenAI" },
-      "keywords": ["creative-intelligence", "trend-analysis", "content-inspiration", "engagement-patterns"],
-      "category": "social-intelligence",
-      "tags": ["creative", "trend-analysis", "content-inspiration", "engagement-patterns", "trigify"],
+      "tags": ["social-listening", "competitive-analysis", "brand-monitoring", "trigify"],
       "mcpServers": {
         "trigify": {
           "command": "npx",
