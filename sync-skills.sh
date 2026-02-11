@@ -2,6 +2,11 @@
 # sync-skills.sh
 # Generates plugins/ from shared-skills/ + skills-map.json
 # This script is the build pipeline that distributes shared skills to department plugins
+# Output follows the official Claude Code plugin architecture:
+#   plugins/{dept}/.claude-plugin/plugin.json  — clean manifest
+#   plugins/{dept}/.mcp.json                   — separate MCP server config
+#   plugins/{dept}/skills/                     — auto-discovered skill folders
+#   plugins/{dept}/commands/                   — slash commands
 
 set -e
 
@@ -62,42 +67,37 @@ for dept_name, dept_config in departments.items():
 
     dept_dir = os.path.join(plugins_dir, dept_name)
 
-    # Create plugin directory structure
+    # Create plugin directory structure (official Claude Code layout)
     os.makedirs(os.path.join(dept_dir, '.claude-plugin'), exist_ok=True)
     os.makedirs(os.path.join(dept_dir, 'commands'), exist_ok=True)
     os.makedirs(os.path.join(dept_dir, 'skills'), exist_ok=True)
 
-    # Generate plugin.json
+    # --- Generate clean plugin.json (no mcpServers, no skills metadata) ---
     plugin_meta = marketplace_plugins.get(dept_name, {})
     plugin_json = {
         "name": dept_name,
         "version": plugin_meta.get("version", "1.0.0"),
         "description": plugin_meta.get("description", f"Social intelligence skills for {dept_name}"),
-        "author": plugin_meta.get("author", {"name": "BenAI"})
+        "author": plugin_meta.get("author", {"name": "BenAI"}),
+        "keywords": plugin_meta.get("keywords", []),
+        "license": "MIT"
     }
 
-    # Add MCP servers if defined
-    mcp_servers = dept_config.get('mcpServers', {})
-    if mcp_servers:
-        plugin_json['mcpServers'] = mcp_servers
-
-    # Add skills metadata
-    skills_meta = dept_config.get('skills', {})
-    if skills_meta:
-        plugin_json['skills'] = {}
-        for skill_id, skill_info in skills_meta.items():
-            plugin_json['skills'][skill_id] = {
-                "displayName": skill_info.get("displayName", skill_id),
-                "summary": skill_info.get("summary", "")
-            }
-
-    # Write plugin.json
     plugin_json_path = os.path.join(dept_dir, '.claude-plugin', 'plugin.json')
     with open(plugin_json_path, 'w') as f:
         json.dump(plugin_json, f, indent=2)
     print(f"  Created: .claude-plugin/plugin.json")
 
-    # Copy command files
+    # --- Generate separate .mcp.json at plugin root ---
+    mcp_servers = dept_config.get('mcpServers', {})
+    if mcp_servers:
+        mcp_json = {"mcpServers": mcp_servers}
+        mcp_json_path = os.path.join(dept_dir, '.mcp.json')
+        with open(mcp_json_path, 'w') as f:
+            json.dump(mcp_json, f, indent=2)
+        print(f"  Created: .mcp.json")
+
+    # --- Copy command files ---
     command_names = dept_config.get('commands', [])
     for cmd_name in command_names:
         src = os.path.join(commands_dir, f"{cmd_name}.md")
@@ -108,7 +108,7 @@ for dept_name, dept_config in departments.items():
         else:
             print(f"  Warning: Command file not found: {cmd_name}.md")
 
-    # Copy skill directories
+    # --- Copy skill directories ---
     skill_names = dept_config.get('skills', {}).keys()
     for skill_name in skill_names:
         src = os.path.join(shared_skills_dir, skill_name)
@@ -124,6 +124,12 @@ for dept_name, dept_config in departments.items():
 
 print("=== Sync complete ===")
 print(f"Generated {len(departments)} department plugins in plugins/")
+print("")
+print("Each plugin now follows the official Claude Code plugin architecture:")
+print("  .claude-plugin/plugin.json  — clean manifest (name, version, description, author, keywords)")
+print("  .mcp.json                   — separate MCP server configuration")
+print("  skills/                     — auto-discovered skill folders with SKILL.md")
+print("  commands/                   — slash command files")
 PYTHON_SCRIPT
 
 echo ""
