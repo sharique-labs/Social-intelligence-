@@ -1,0 +1,52 @@
+{
+  "name": "social-intelligence",
+  "owner": {
+    "name": "benai",
+    "email": "naveedharri@gmail.com"
+  },
+  "metadata": {
+    "description": "Trigify-powered social intelligence skills that give your AI agent access to the entire social web. Monitor competitors, track brand mentions, analyze content gaps, and surface buying signals across X, Reddit, YouTube, LinkedIn, Podcasts, and more."
+  },
+  "plugins": [
+    {
+      "name": "marketing",
+      "source": "./plugins/marketing",
+      "version": "1.0.0",
+      "description": "Social intelligence for marketing — content gap analysis, trending topics, ad opportunities, content strategy, and performance tracking powered by Trigify.",
+      "author": { "name": "BenAI" },
+      "keywords": ["social-listening", "content-strategy", "trigify", "competitive-analysis", "brand-monitoring", "trending-topics", "content-gaps"]
+    },
+    {
+      "name": "sales",
+      "source": "./plugins/sales",
+      "version": "1.0.0",
+      "description": "Social intelligence for sales — prospect buying signals, competitive positioning, lead social activity, and market intelligence powered by Trigify.",
+      "author": { "name": "BenAI" },
+      "keywords": ["social-signals", "prospect-intelligence", "buying-intent", "competitive-positioning", "lead-research"]
+    },
+    {
+      "name": "product",
+      "source": "./plugins/product",
+      "version": "1.0.0",
+      "description": "Social intelligence for product — feature request surfacing, launch sentiment, market gaps, user pain points, and competitive product tracking powered by Trigify.",
+      "author": { "name": "BenAI" },
+      "keywords": ["product-intelligence", "feature-requests", "market-gaps", "launch-sentiment", "user-feedback"]
+    },
+    {
+      "name": "operations",
+      "source": "./plugins/operations",
+      "version": "1.0.0",
+      "description": "Social intelligence automation — daily monitoring schedules, automated reporting workflows, and data pipelines for social intelligence powered by Trigify.",
+      "author": { "name": "BenAI" },
+      "keywords": ["automation", "monitoring", "reporting", "scheduling", "data-pipelines"]
+    },
+    {
+      "name": "creative",
+      "source": "./plugins/creative",
+      "version": "1.0.0",
+      "description": "Social intelligence for creative — trend-inspired content, visual content opportunities, and audience engagement patterns powered by Trigify.",
+      "author": { "name": "BenAI" },
+      "keywords": ["creative-intelligence", "trend-analysis", "content-inspiration", "engagement-patterns"]
+    }
+  ]
+}

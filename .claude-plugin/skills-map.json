@@ -1,0 +1,118 @@
+{
+  "departments": {
+    "marketing": {
+      "commands": ["social-intelligence"],
+      "mcpServers": {
+        "trigify": {
+          "command": "npx",
+          "args": ["-y", "mcp-remote", "https://api.trigify.io/mcp"],
+          "env": {
+            "TRIGIFY_API_KEY": "${TRIGIFY_API_KEY}"
+          }
+        }
+      },
+      "skills": {
+        "social-listening": {
+          "displayName": "Social Listening",
+          "summary": "Create social listening searches, fetch and analyze posts across X, Reddit, YouTube, LinkedIn, Podcasts. Monitor keywords, competitors, or your brand across any supported platform."
+        },
+        "competitive-intel": {
+          "displayName": "Competitive Intelligence",
+          "summary": "Monitor competitors across social platforms. Track product launches, positioning shifts, content strategy, and market movements. Generate competitive intelligence reports."
+        },
+        "brand-monitor": {
+          "displayName": "Brand Monitor",
+          "summary": "Track brand mentions, sentiment, and post performance. Get iteration suggestions based on historical data. Monitor reputation across the social web."
+        }
+      }
+    },
+    "sales": {
+      "commands": ["social-intelligence"],
+      "mcpServers": {
+        "trigify": {
+          "command": "npx",
+          "args": ["-y", "mcp-remote", "https://api.trigify.io/mcp"],
+          "env": {
+            "TRIGIFY_API_KEY": "${TRIGIFY_API_KEY}"
+          }
+        }
+      },
+      "skills": {
+        "social-listening": {
+          "displayName": "Social Listening",
+          "summary": "Monitor prospect conversations, industry discussions, and buying signals across social platforms. Surface high-intent leads from social data."
+        },
+        "competitive-intel": {
+          "displayName": "Competitive Intelligence",
+          "summary": "Track competitor positioning, customer complaints about competitors, and market shifts. Arm sales with competitive battle cards from real social data."
+        }
+      }
+    },
+    "product": {
+      "commands": ["social-intelligence"],
+      "mcpServers": {
+        "trigify": {
+          "command": "npx",
+          "args": ["-y", "mcp-remote", "https://api.trigify.io/mcp"],
+          "env": {
+            "TRIGIFY_API_KEY": "${TRIGIFY_API_KEY}"
+          }
+        }
+      },
+      "skills": {
+        "social-listening": {
+          "displayName": "Social Listening",
+          "summary": "Surface feature requests, user pain points, and product feedback from social conversations. Track how users talk about your product category."
+        },
+        "competitive-intel": {
+          "displayName": "Competitive Intelligence",
+          "summary": "Track competitor product launches, feature announcements, and user reactions. Identify product gaps and opportunities from market conversations."
+        },
+        "brand-monitor": {
+          "displayName": "Brand Monitor",
+          "summary": "Monitor product launch sentiment, feature reception, and user satisfaction signals. Track how product changes impact public perception."
+        }
+      }
+    },
+    "operations": {
+      "commands": ["social-intelligence"],
+      "mcpServers": {
+        "trigify": {
+          "command": "npx",
+          "args": ["-y", "mcp-remote", "https://api.trigify.io/mcp"],
+          "env": {
+            "TRIGIFY_API_KEY": "${TRIGIFY_API_KEY}"
+          }
+        }
+      },
+      "skills": {
+        "social-listening": {
+          "displayName": "Social Listening Automation",
+          "summary": "Set up automated daily schedules to monitor, report, and iterate on social data. Build monitoring pipelines that run on autopilot."
+        }
+      }
+    },
+    "creative": {
+      "commands": ["social-intelligence"],
+      "mcpServers": {
+        "trigify": {
+          "command": "npx",
+          "args": ["-y", "mcp-remote", "https://api.trigify.io/mcp"],
+          "env": {
+            "TRIGIFY_API_KEY": "${TRIGIFY_API_KEY}"
+          }
+        }
+      },
+      "skills": {
+        "social-listening": {
+          "displayName": "Social Listening",
+          "summary": "Discover trending formats, viral content patterns, and audience engagement signals. Feed social intelligence into creative strategy and content ideation."
+        },
+        "brand-monitor": {
+          "displayName": "Brand Monitor",
+          "summary": "Track creative content performance, audience reactions, and engagement patterns. Get data-driven suggestions for creative iteration."
+        }
+      }
+    }
+  }
+}
