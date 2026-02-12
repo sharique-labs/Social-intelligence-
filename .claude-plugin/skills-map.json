@@ -23,6 +23,10 @@
         "brand-monitor": {
           "displayName": "Brand Monitor",
           "summary": "Track brand mentions, sentiment, and post performance. Get iteration suggestions based on historical data. Monitor reputation across the social web."
+        },
+        "email-responser": {
+          "displayName": "Email Responser",
+          "summary": "Craft contextual email responses powered by social intelligence data. Draft replies informed by brand voice, sentiment signals, and audience context."
         }
       }
     }
