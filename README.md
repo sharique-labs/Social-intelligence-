@@ -1,16 +1,16 @@
-# Social Intelligence Plugin (Trigify-Powered)
+# Social Intelligence Plugin 
 
-Give your AI agent access to the entire social web. Monitor competitors, track your brand, analyze content gaps, and surface buying signals — all powered by [Trigify's](https://trigify.io) social listening MCP server.
+Give your AI agent access to the entire social web. Monitor competitors, track your brand, analyze content gaps, and surface buying signals.
 
 ## What This Does
 
-This is a Claude Code plugin that connects Trigify's social intelligence data to AI-powered skills across every department in your organization.
+This is a Claude Code plugin that connects web social intelligence data to AI-powered skills across every department in your organization.
 
 ```
 Your AI Agent
      │
      ▼
-Trigify MCP Server ──► X · Reddit · YouTube · LinkedIn · Podcasts
+ MCP Server ──► X · Reddit · YouTube · LinkedIn · Podcasts
      │                  (+ Substack · Threads · Instagram · TikTok · GitHub · HN coming soon)
      │
      ├── Marketing ──► Content gaps, trending topics, ad opportunities
